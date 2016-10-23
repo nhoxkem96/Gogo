@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionImage" id="gTV-IL-0wX" customClass="CollectionImage">
+            <rect key="frame" x="0.0" y="0.0" width="175" height="139"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="175" height="139"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NDQ-45-WbC"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4I-Xc-UVx">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="cS8-EN-IGF"/>
+                            <constraint firstAttribute="width" secondItem="D4I-Xc-UVx" secondAttribute="height" multiplier="1:1" id="wJ7-7W-Jxr"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="IconX.png"/>
+                        <connections>
+                            <action selector="clickBtnCancel:" destination="gTV-IL-0wX" eventType="touchUpInside" id="LXL-L9-Fjf"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="NDQ-45-WbC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0jm-y8-KXV"/>
+                <constraint firstAttribute="bottom" secondItem="NDQ-45-WbC" secondAttribute="bottom" id="2ff-Qp-bKW"/>
+                <constraint firstItem="NDQ-45-WbC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="EK7-SQ-Nhr"/>
+                <constraint firstAttribute="trailing" secondItem="D4I-Xc-UVx" secondAttribute="trailing" constant="5" id="QZ4-Pu-QAA"/>
+                <constraint firstItem="D4I-Xc-UVx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="b5A-am-8Eh"/>
+                <constraint firstAttribute="trailing" secondItem="NDQ-45-WbC" secondAttribute="trailing" id="efJ-AW-PYh"/>
+            </constraints>
+            <size key="customSize" width="175" height="139"/>
+            <connections>
+                <outlet property="btnCancel" destination="D4I-Xc-UVx" id="9Ar-i9-Gzs"/>
+                <outlet property="imgItem" destination="NDQ-45-WbC" id="Oog-aV-MMb"/>
+            </connections>
+            <point key="canvasLocation" x="250.5" y="205.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="IconX.png" width="180" height="180"/>
+    </resources>
+</document>
